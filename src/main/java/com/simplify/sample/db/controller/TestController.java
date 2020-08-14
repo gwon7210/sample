@@ -20,5 +20,4 @@ public class TestController {
     public @ResponseBody List<Test> query() throws Exception{
         return testService.getAll();
     }
-
 }

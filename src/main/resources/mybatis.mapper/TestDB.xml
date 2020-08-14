@@ -10,4 +10,8 @@
         insert into user (id,pass) values (#{id}, #{pass})
     </select>
 
+    <select id="checkUserInfo" parameterType="com.simplify.sample.db.dto.memberVO" resultType="com.simplify.sample.db.dto.memberVO">
+        select * from user where id = (#{id}) and pass=(#{pass})
+        /*만약 select 에서 찾지 못하면 어떤 값이 반환되는가?*/
+    </select>
 </mapper>

@@ -23,4 +23,8 @@ public class TestService {
         testMapper.insertMainList(map);
     }
 
+    public memberVO checkUserInfo(memberVO map) throws Exception{
+        return testMapper.checkUserInfo(map);
+    }
+
 }

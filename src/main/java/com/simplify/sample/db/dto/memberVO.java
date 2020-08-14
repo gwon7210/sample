@@ -1,8 +1,8 @@
 package com.simplify.sample.db.dto;
 
 public class memberVO {
-    String id;
-    String pass;
+    private String id;
+    private String pass;
 
     public memberVO(String id, String pass) {
         this.id = id;
