@@ -6,12 +6,20 @@
         SELECT * FROM test
     </select>
 
-    <select id="insertMainList" parameterType="com.simplify.sample.db.dto.memberVO">
-        insert into user (id,pass) values (#{id}, #{pass})
-    </select>
-
     <select id="checkUserInfo" parameterType="com.simplify.sample.db.dto.memberVO" resultType="com.simplify.sample.db.dto.memberVO">
         select * from user where id = (#{id}) and pass=(#{pass})
         /*만약 select 에서 찾지 못하면 어떤 값이 반환되는가?*/
     </select>
+
+    <insert id="insertMainList" parameterType="com.simplify.sample.db.dto.memberVO">
+        insert into user (id,pass) values (#{id}, #{pass})
+    </insert>
+    <!--태그 이름은 임의적인건가?-->
+    <insert id="insertContent" parameterType="com.simplify.sample.db.dto.contentVO">
+        insert into board (del_pass, title, content,user_id_fk);
+    </insert>
+
+
+
+
 </mapper>

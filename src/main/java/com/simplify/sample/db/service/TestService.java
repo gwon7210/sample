@@ -1,6 +1,7 @@
 package com.simplify.sample.db.service;
 
 import com.simplify.sample.db.dto.Test;
+import com.simplify.sample.db.dto.contentVO;
 import com.simplify.sample.db.dto.memberVO;
 import com.simplify.sample.db.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,10 @@ public class TestService {
 
     public memberVO checkUserInfo(memberVO map) throws Exception{
         return testMapper.checkUserInfo(map);
+    }
+
+    public void insertContent(contentVO con) throws Exception{
+        testMapper.insertContent(con);
     }
 
 }
